@@ -303,6 +303,8 @@ h1,
     font-size: calc(1.4125rem + 1.95vw)
 }
 
+
+
 @media(min-width: 1200px) {
 
     h1,
@@ -33117,4 +33119,12 @@ body:not(.modal-open) .layout-content-navbar .layout-navbar {
 [data-bs-theme=dark] .footer.bg-dark {
     --bs-footer-brand-hover-color: color-mix(in sRGB, var(--bs-paper-bg) 84%, var(--bs-dark-contrast));
     --bs-footer-link-hover-color: color-mix(in sRGB, var(--bs-paper-bg) 84%, var(--bs-dark-contrast))
+}
+
+
+@media(max-width:992px)
+{
+    [data-bs-theme=dark] nav.layout-navbar .navbar.landing-navbar .navbar-nav .nav-link {
+        color: #ffffff !important;
+    }
 }
