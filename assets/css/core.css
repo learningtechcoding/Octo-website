@@ -5742,7 +5742,7 @@ fieldset:disabled .btn {
     --bs-accordion-btn-color: #1E1E1E;
     --bs-accordion-btn-bg: var(--bs-accordion-bg);
     --bs-accordion-btn-icon: url("../img/plus.png");
-    --bs-accordion-btn-icon-width: 1.25rem;
+    --bs-accordion-btn-icon-width: 2rem;
     --bs-accordion-btn-icon-transform: rotate(-180deg);
     --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
     --bs-accordion-btn-active-icon: url("../img/minus.png");
@@ -33126,5 +33126,114 @@ body:not(.modal-open) .layout-content-navbar .layout-navbar {
 {
     [data-bs-theme=dark] nav.layout-navbar .navbar.landing-navbar .navbar-nav .nav-link {
         color: #ffffff !important;
+    }
+}
+
+
+
+/*###############> Loader Website star <#############t  */
+        /* Loader Styling */
+        .loader-main {
+            display: flex; /* Ensure the loader is visible by default */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111;
+  
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100000000;
+        }
+  
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 2px solid transparent;
+            border-top: 3px solid  #9A7AF4;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite, glow 1.5s ease-in-out infinite alternate;
+        }
+  
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+  
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px #9A7AF4 }
+            100% { box-shadow: 0 0 30px  #9A7AF4 }
+        }
+  
+     
+  /*###############> Loader Website End  <#############*/
+  
+  
+  
+  /*##################> From Bottom to top Button start <################*/
+  #buttonbtmtop {
+    display: inline-block;
+    background-color: #9A7AF4;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #buttonbtmtop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #buttonbtmtop:hover {
+    cursor: pointer;
+    background-color:  #9A7AF4;
+  }
+  #buttonbtmtop:active {
+    background-color: #9A7AF4;
+  }
+  #buttonbtmtop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+   
+  /*##################> From Bottom to top Button End   <################*/
+  
+
+
+  
+/*################## > Stcky Header start <################### */
+.sticky-header {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  
+  
+  /*################## > Stcky Header End   <###################*/
+
+  @media(min-width:992px) {
+
+    .mainheader {
+      z-index: 3 !important;
+      position: relative;
     }
 }
